@@ -13,7 +13,9 @@ app.use(expressJwt({
 }).unless({
   path: ['/work/login']  // 指定路径不经过 Token 解析
 }))
-
+/**
+ * @param
+ */
 app.all('*', function (req, res, next) {
   //设为指定的域
   res.header("Access-Control-Allow-Origin", "*");
